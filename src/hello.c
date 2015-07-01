@@ -25,7 +25,9 @@ void loops() {
 
 int main() {
     hello();
+    printf("-----------------\n");
     printf("Div 95 / 31: %.10f\n", div(95, 31));
+    printf("-----------------\n");
     loops();
     
     return 0;
