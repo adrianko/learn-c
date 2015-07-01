@@ -14,6 +14,13 @@ void loops() {
     for (int i = 0; i < 5; i++) {
         printf("for: %d\n", i);
     }
+    
+    printf("while loop:\n");
+    int j = 0;
+    
+    while (j < 5) {
+        printf("while: %d\n", j++);
+    }
 }
 
 int main() {
