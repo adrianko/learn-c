@@ -55,6 +55,18 @@ void buffer_overflow() {
     printf("%s\n", chars);
 }
 
+void add(int *x, int add) {
+    (*x) = (*x) + add;
+}
+
+void pointers() {
+    int x = 4;
+    int *px = &x;
+    printf("%d\n", *px);
+    add(px, 5);
+    printf("%d\n", *px);
+}
+
 int main() {
     hello();
     printf("-----------------\n");
@@ -65,5 +77,8 @@ int main() {
     conditions();
     printf("-----------------\n");
     buffer_overflow();
+    printf("-----------------\n");
+    pointers();
+
     return 0;
 }
