@@ -46,6 +46,15 @@ void conditions() {
     }
 }
 
+void buffer_overflow() {
+    // Enter max 7 chars, 8th element is null character denoting end of array
+    // Enter more than 7 characters results in buffer overflow "Abort trap: 6"
+    char chars[8];
+    printf("Enter 7 chars: ");
+    scanf("%s", chars);
+    printf("%s", chars);
+}
+
 int main() {
     hello();
     printf("-----------------\n");
@@ -54,6 +63,7 @@ int main() {
     loops();
     printf("-----------------\n");
     conditions();
-    
+    printf("-----------------\n");
+    buffer_overflow();
     return 0;
 }
