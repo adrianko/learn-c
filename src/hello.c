@@ -8,6 +8,10 @@ double div(int a, int b) {
     return a / (double) b;
 }
 
+void functions() {
+    printf("Div 95 / 31: %.10f\n", div(95, 31));
+}
+
 void loops() {
     printf("for loop:\n");
     
@@ -70,7 +74,7 @@ void pointers() {
 int main() {
     hello();
     printf("-----------------\n");
-    printf("Div 95 / 31: %.10f\n", div(95, 31));
+    functions();
     printf("-----------------\n");
     loops();
     printf("-----------------\n");
