@@ -51,7 +51,7 @@ void buffer_overflow() {
     // Enter more than 7 characters results in buffer overflow "Abort trap: 6"
     char chars[8];
     printf("Enter 7 chars (no spaces): ");
-    scanf("%s", chars);
+    scanf("%s", &chars);
     printf("%s\n", chars);
 }
 
