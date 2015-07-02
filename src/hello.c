@@ -23,12 +23,37 @@ void loops() {
     }
 }
 
+void conditions() {
+    printf("if/else stmt:\n");
+    int f = 0;
+    
+    if (f == 1) {
+        printf("f is 1\n");
+    } else {
+        printf("f: %d\n", f);
+    }
+    
+    printf("switch/case stmt:\n");
+    int g = 5;
+    
+    switch (g) {
+        case 0:
+            printf("g is 0\n");
+            break;
+        default:
+            printf("g: %d\n", g);
+            break;
+    }
+}
+
 int main() {
     hello();
     printf("-----------------\n");
     printf("Div 95 / 31: %.10f\n", div(95, 31));
     printf("-----------------\n");
     loops();
+    printf("-----------------\n");
+    conditions();
     
     return 0;
 }
