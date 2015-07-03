@@ -55,7 +55,7 @@ void buffer_overflow() {
     // Enter more than 7 characters results in buffer overflow "Abort trap: 6"
     char chars[8];
     printf("Enter 7 chars (no spaces): ");
-    scanf("%s", &chars);
+    scanf("%s", chars);
     printf("%s\n", chars);
 }
 
@@ -71,6 +71,19 @@ void pointers() {
     printf("%d\n", *px);
 }
 
+struct point {
+    int x;
+    int y;
+};
+
+void structures() {
+    struct point point1;
+    point1.x = 5;
+    point1.y = 4;
+    printf("point1:\n");
+    printf("x: %d, y: %d\n", point1.x, point1.y);
+}
+
 int main() {
     hello();
     printf("-----------------\n");
@@ -83,6 +96,8 @@ int main() {
     buffer_overflow();
     printf("-----------------\n");
     pointers();
-
+    printf("-----------------\n");
+    structures();
+    
     return 0;
 }
