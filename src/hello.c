@@ -84,19 +84,23 @@ void structures() {
     printf("x: %d, y: %d\n", point1.x, point1.y);
 }
 
+void lb() {
+    printf("-----------------\n");
+}
+
 int main() {
     hello();
-    printf("-----------------\n");
+    lb();
     functions();
-    printf("-----------------\n");
+    lb();
     loops();
-    printf("-----------------\n");
+    lb();
     conditions();
-    printf("-----------------\n");
+    lb();
     buffer_overflow();
-    printf("-----------------\n");
+    lb();
     pointers();
-    printf("-----------------\n");
+    lb();
     structures();
     
     return 0;
