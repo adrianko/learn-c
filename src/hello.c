@@ -82,6 +82,10 @@ void structures() {
     point1.y = 4;
     printf("point1:\n");
     printf("x: %d, y: %d\n", point1.x, point1.y);
+    printf("\n");
+    struct point *ppoint1 = &point1;
+    printf("point1 pointer:\n");
+    printf("x: %d, y: %d\n", ppoint1->x, ppoint1->y);
 }
 
 void lb() {
