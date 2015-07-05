@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 void hello() {
     printf("Hello, world\n");
@@ -88,6 +89,12 @@ void structures() {
     printf("x: %d, y: %d\n", ppoint1->x, ppoint1->y);
 }
 
+void strings() {
+	char s1[8] = "Hello";
+	char s2[8] = "World";
+	printf("s1/s2: %d\n", strcmp(s1, s2));
+}
+
 void lb() {
     printf("-----------------\n");
 }
@@ -106,6 +113,8 @@ int main() {
     pointers();
     lb();
     structures();
+	lb();
+	strings();
     
     return 0;
 }
