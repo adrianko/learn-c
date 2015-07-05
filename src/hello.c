@@ -113,8 +113,8 @@ int main() {
     pointers();
     lb();
     structures();
-	  lb();
-	  strings();
+    lb();
+    strings();
 
     return 0;
 }
