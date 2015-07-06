@@ -1,16 +1,17 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void hello() {
     printf("Hello, world\n");
 }
 
-double div(int a, int b) {
+double divide(int a, int b) {
     return a / (double) b;
 }
 
 void functions() {
-    printf("Div 95 / 31: %.10f\n", div(95, 31));
+    printf("Div 95 / 31: %.10f\n", divide(95, 31));
 }
 
 void loops() {
@@ -95,6 +96,36 @@ void strings() {
     printf("s1/s2: %d\n", strcmp(s1, s2));
 }
 
+void memory_allocator() {
+    int numsToStore;
+    printf("Number of ints to store: ");
+    scanf("%d", &numsToStore);
+    int *pMem = (int *) malloc(numsToStore * sizeof(int));
+
+    if (pMem != NULL) {
+        int i = 0;
+
+        while (i < numsToStore) {
+            printf("Enter an int or quit: ");
+            
+            if (scanf("%d", &pMem[i]) != 1) {
+                break;
+            }
+
+            i++;
+        }
+
+        printf("You entered:\n");
+
+        for (int j = 0; j < i; j++) {
+            printf("%d: %d\n", j, pMem[j]);
+        }
+
+        printf("\n");
+        free(pMem);
+    }
+}
+
 void lb() {
     printf("-----------------\n");
 }
@@ -115,6 +146,8 @@ int main() {
     structures();
     lb();
     strings();
+    lb();
+    memory_allocator();
 
     return 0;
 }
