@@ -115,13 +115,16 @@ void memory_allocator() {
             i++;
         }
 
-        printf("You entered:\n");
+        if (numsToStore > 0) {
+            printf("You entered:\n");
 
-        for (int j = 0; j < i; j++) {
-            printf("%d: %d\n", j, pMem[j]);
+            for (int j = 0; j < i; j++) {
+                printf("%d: %d\n", j, pMem[j]);
+            }
+
+            printf("\n");
         }
 
-        printf("\n");
         free(pMem);
     }
 }
