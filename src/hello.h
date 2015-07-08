@@ -10,3 +10,4 @@ void structures();
 void strings();
 void memory_allocator();
 void lb();
+int main();
