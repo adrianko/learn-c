@@ -1,3 +1,8 @@
+typedef struct {
+    int x;
+    int y;
+} Point;
+
 void hello();
 double divide(int a, int b);
 void functions();

@@ -74,11 +74,6 @@ void pointers() {
     printf("%d\n", *px);
 }
 
-typedef struct {
-    int x;
-    int y;
-} Point;
-
 void structures() {
     Point point1;
     point1.x = 5;
